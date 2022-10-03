@@ -12,72 +12,28 @@ Download a pre-processed data file [here](https://drive.google.com/file/d/126Xxy
 
 `npm start`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 2. Complete Way
 
-## Available Scripts
+In order to process data yourself, you can obtain the ISS data [here](https://drive.google.com/drive/folders/1Jw8-oDAKWFvELYvjxc5_QEtymbHtLYNZ?usp=sharing) from Google Drive. 
 
-In the project directory, you can run:
+Alternatively, you can retrieve the data directly from NASA [here](https://spdf.gsfc.nasa.gov/pub/data/international_space_station_iss/sp_fpmu/).
+
+Download these CDF files, whether from Google Drive or directly from NASA, and put them in a folder called "iss_data", and put that folder in the src folder of the repo. 
+
+In the src folder of the repo, open 'space_apps_iss_data_extraction.py' with your preferred text editor. On line 11, replace the path with your path to a CDF library. If you do not have a CDF library, download it [here](https://cdf.gsfc.nasa.gov/) and make not of the installation directory.
+
+Then, on a command line, navigate to the src folder of the repository and type
+
+`python space_apps_iss_data_extraction.py`
+
+This script will take 10 mins to run. It will process ISS data from cdf form into json data readable by the React front end to map data onto the globe.
+
+---
+
+Once you've done one of the above, you are read to start the program by typing:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# What does the Ionosphere Mapper do?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# space-apps-hack-ionosphere" 
+It takes amateur radio data from the ISS, extracts electron density data, and maps this data onto a 3D interactive globe.

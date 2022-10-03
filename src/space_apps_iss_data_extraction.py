@@ -26,7 +26,7 @@ electronDensity = []
 trackerIndex = 1
 
 for filename in onlyfiles:
-    litStr = "C:/Users/mrgha/OneDrive/Documents/gitProj/space-apps-hack-ionosphere-front-end/src/iss_data/"+filename
+    litStr = "./iss_data/"+filename
     cdf = pycdf.CDF(litStr)
     print(trackerIndex)
     trackerIndex+=1

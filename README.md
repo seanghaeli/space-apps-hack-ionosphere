@@ -1,3 +1,7 @@
+#Ionosphere Mapper
+
+![image](https://user-images.githubusercontent.com/58916776/193508522-de107c8a-ba29-40b5-b5b8-250a43215daa.png)
+
 # Running Project
 
 When you clone this repo, you will have to do one of the following to be able to run it:

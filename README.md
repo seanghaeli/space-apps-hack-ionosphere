@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Running Project
+
+When you clone this repo, you will have to do one of the following to be able to run it:
+
+## 1. Fast way
+
+Download a pre-processed data file [here](https://drive.google.com/file/d/126XxyoYG5VgmHcpXlKO_mPFVvLgl_eV-/view?usp=sharing) from Google Drive and put it inside the src folder of your repo. Then enter the following command on a command line window in your repository's directory:
+
+`npm start`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
